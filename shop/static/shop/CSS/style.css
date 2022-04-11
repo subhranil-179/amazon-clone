@@ -1,0 +1,243 @@
+
+/* Root properties */
+:root{
+    /* Color Variables */
+    --primary-dark: #232f3e;
+    --primary-light: #37475a;
+    --secondary-dark: #ff9900;
+    --secondary-light: #fcbb6a;
+}
+
+/* Setting default properties for all elements */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+Styling imported icons?
+ */
+
+.fa-imported{
+    font-size: 1.5rem;
+}
+
+/* 
+Navbar properties
+*/
+
+.navbar{
+    color: white;
+    background-color: var(--primary-dark);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+/* Nav-row properties */
+
+.nav-row{
+    margin: 0px 0.8rem;
+    height: 3rem;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+/* Row specific properties */
+
+#row-1{
+    justify-content: space-between;
+}
+
+#row-3{
+    flex-direction: column;
+}
+
+/* Row 1 child properites */
+
+#left{
+    display: flex;
+}
+
+#right{
+    display: flex;
+    /* border: 2px solid yellow; */
+    align-items: center;
+}
+
+/* Left container child properties */
+
+#side-bar-btn{
+    align-self: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#amazon-logo{
+    margin-top: 4px;
+    display: flex;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+#amazon-logo-img{
+    position: relative;
+    width: 90px;
+    background-image: url('/media/shop/IMAGES/logo-2.png');
+    background-position:left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#amazon-logo-text{
+    font-size: 0.8rem;
+    margin-top: 0.68rem;
+}
+
+#sign-in-text{
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+#sign-in-logo{
+    padding-right: 0.4rem;
+    cursor: pointer;
+}
+
+#cart-logo{
+    font-size: 2rem;
+    font-weight: 550;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    cursor: pointer;
+}
+
+/* 
+Row 2 properties
+*/
+
+#row-2{
+    padding: 0.2rem 0rem;
+    margin: 0rem 0.5rem;
+}
+
+/* 
+Row 2 child properties
+*/
+
+#search{
+    border: 0px solid transparent;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+input:focus{
+    outline: none; /* Stops from border higlight */
+}
+
+#search-btn{
+    width: 4rem;
+    border: 0px solid transparent;
+    background-color: white;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    cursor: pointer;
+}
+
+#search-btn-icon{
+    padding-top: 0.7rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-light);
+}
+
+/* 
+No row-3 specific properties
+*/
+
+/* 
+Row 3 child properties
+*/
+
+#shop-by{
+    font-size: 0.71rem;
+    cursor: pointer;
+    width: 3rem;
+}
+
+#shop-by-options-holder{
+    display: flex;
+    margin-bottom: 15px;
+}
+.shop-by-options{
+    list-style: none;
+    font-size: 1rem;
+    margin: 0rem 0.5rem;
+    cursor: pointer;
+}
+
+.shop-by-options:nth-of-type(1){
+    margin-left: 0px;
+}
+
+/* Navbar Ended here */
+
+/* Location starts here */
+
+#delivery-location{
+    color: white;
+    background-color: var(--primary-light);
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+#location-logo{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+#location-text{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Location ends here */
+
+/* 
+Styling Categories
+*/
+
+.categories{
+    height: auto;
+    background-color: white;
+}
+
+#category-holder{
+    display: flex;
+    overflow: auto;
+}
+
+.category{
+    list-style: none;
+    font-size: 0.7rem;
+    margin: 0.6rem 0.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category img{
+    width: 45px;
+    height: 45px;
+}
+
+
+/* <-------------------------------STYLING FEATURES AND DEALS SECTION--------------------------------> */
+
+.deals-features-holder{
+    background-color: #ff9900;
+}
