@@ -16,6 +16,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* body{
+    max-width: 100vw;
+    overflow-x: hidden;
+} */
+
 /* 
 Styling imported icons?
  */
@@ -84,7 +89,7 @@ Navbar properties
 #amazon-logo-img{
     position: relative;
     width: 90px;
-    background-image: url('/media/shop/IMAGES/logo-2.png');
+    background-image: url('/static/shop/IMAGES/logo-2.png');
     background-position:left;
     background-size: contain;
     background-repeat: no-repeat;
@@ -240,4 +245,32 @@ Styling Categories
 
 .deals-features-holder{
     background-color: #ff9900;
+}
+
+.carousel-item-holder{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    list-style: none;
+}
+
+.carousel-item > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-item{
+    display: none;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.active-image{
+    display: block;
+    top: 0;
+    left: 0;
 }

@@ -80,35 +80,35 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
     <div class="categories">
         <ul id="category-holder">
             <li class="category" id="category-1">
-                <img src="/media/shop/IMAGES/CATEGORY/grocery.jpeg" alt="grocery.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/grocery.jpeg' %}" alt="grocery.jpeg">
                 <p>Grocery</p>
             </li>
             <li class="category" id="category-2">
-                <img src="/media/shop/IMAGES/CATEGORY/mobiles.jpeg" alt="mobiles.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/mobiles.jpeg' %}" alt="mobiles.jpeg">
                 <p>Mobiles</p>
             </li>
             <li class="category" id="category-3">
-                <img src="/media/shop/IMAGES/CATEGORY/fashion.png" alt="fashion.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/fashion.png' %}" alt="fashion.png">
                 <p>Fashion</p>
             </li>
             <li class="category" id="category-4">
-                <img src="/media/shop/IMAGES/CATEGORY/home.jpeg" alt="home.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/home.jpeg' %}" alt="home.jpeg">
                 <p>Home</p>
             </li>
             <li class="category" id="category-5">
-                <img src="/media/shop/IMAGES/CATEGORY/essentials.png" alt="essentials.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/essentials.png' %}" alt="essentials.png">
                 <p>Essentials</p>
             </li>
             <li class="category" id="category-6">
-                <img src="/media/shop/IMAGES/CATEGORY/electronics.jpeg" alt="electronics.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/electronics.jpeg' %}" alt="electronics.jpeg">
                 <p>Electronics</p>
             </li>
             <li class="category" id="category-7">
-                <img src="/media/shop/IMAGES/CATEGORY/books-and-toys.png" alt="books-and-toys.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/books-and-toys.png' %}" alt="books-and-toys.png">
                 <p><pre>Books, Toys</pre></p>
             </li>
             <li class="category" id="category-8">
-                <img src="/media/shop/IMAGES/CATEGORY/appliances.jpeg" alt="appliances.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/appliances.jpeg' %}" alt="appliances.jpeg">
                 <p>Appliances</p>
             </li>
         </ul>
@@ -117,12 +117,17 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
     <div class="deals-features-holder">
         <div class="deals-carousel">
             <ul class="carousel-item-holder">
+                {% for i in images_list %}
                 <li class="carousel-item">
-                    <img src="/media/shop/IMAGES/CAROUSEL/1.jpg" alt="" srcset="">
+                    <img src="{% static 'shop/IMAGES/CAROUSEL/' %}{{i}}" alt="" srcset="">
                 </li>
-            </ul>
-        </div>
+                {% endfor %}
 
+            </ul>
+
+            
+        </div>
+        
         <div class="feature-cards-holder">
             ...
         </div>
@@ -130,4 +135,8 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
     </div>
 
 
+{% endblock %}
+
+{% block js_files %}
+<script src="{% static 'shop/JS/script.js' %}"></script>
 {% endblock %}
