@@ -117,8 +117,9 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
     <div class="deals-features-holder">
         <div class="deals-carousel">
             <ul class="carousel-item-holder">
-                {% for i in images_list %}
+                {% for i in carousel %}
                 <li class="carousel-item">
+                    <div class="overlay"></div>
                     <img src="{% static 'shop/IMAGES/CAROUSEL/' %}{{i}}" alt="" srcset="">
                 </li>
                 {% endfor %}
@@ -129,7 +130,45 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
         </div>
         
         <div class="feature-cards-holder">
-            ...
+            <div class="feature-card">
+                <div class="feature">
+                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/amazon-pay.jpeg' %}" alt="">
+                    <span class="feature-name">
+                        Amazon Pay
+                    </span>
+                </div>
+                <div class="feature">
+                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/recharge.jpeg' %}" alt="">
+                    <span class="feature-name">
+                        Recharge
+                    </span>
+                </div>
+                <div class="feature">
+                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/rewards.jpeg' %}" alt="">
+                    <span class="feature-name">
+                        Rewards
+                    </span>
+                </div>
+                <div class="feature">
+                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/pay-bills.jpeg' %}" alt="">
+                    <span class="feature-name">
+                        Pay Bills
+                    </span>
+                </div>
+            </div>
+            <div class="feature-card" id="sign-in-card">
+                <h3>Welcome</h3>
+                <p>Sign in for your best experience</p>
+                <button>Sign in securly</button>
+                <a href="$">Create an account</a>
+            </div>
+            <!-- Remove from here -->
+            {% for img in feature_card_image_list %}
+            <div class="feature-card offer-card">
+                <img src="{% static 'shop/IMAGES/CARD_OFFER/' %}{{img}}" alt="" srcset="">
+            </div>
+            {% endfor %}
+            <!-- Till here -->
         </div>
 
     </div>

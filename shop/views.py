@@ -6,10 +6,12 @@ from django.conf import settings
 
 def index(request):
 
-    images_list = os.listdir(os.path.join(settings.BASE_DIR, 'shop/static/shop/IMAGES/CAROUSEL'))
-    
+    carousel_images_list = os.listdir(os.path.join(settings.BASE_DIR, 'shop/static/shop/IMAGES/CAROUSEL'))
+    feature_card_image_list = os.listdir(os.path.join(settings.BASE_DIR, 'shop/static/shop/IMAGES/CARD_OFFER'))
+
     context = {
-        'images_list': images_list
+        'carousel': carousel_images_list,
+        'feature_card_image_list': feature_card_image_list
     }
 
     return render(request, 'shop/index.html', context)

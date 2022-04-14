@@ -16,10 +16,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body{
+body{
     max-width: 100vw;
-    overflow-x: hidden;
-} */
+    background-color: #d5dbdb;
+}
 
 /* 
 Styling imported icons?
@@ -224,7 +224,7 @@ Styling Categories
 
 #category-holder{
     display: flex;
-    overflow: auto;
+    overflow-x: scroll;
 }
 
 .category{
@@ -244,9 +244,19 @@ Styling Categories
 /* <-------------------------------STYLING FEATURES AND DEALS SECTION--------------------------------> */
 
 .deals-features-holder{
-    background-color: #ff9900;
+    margin-top: 5px;
 }
-
+.overlay{
+    position: absolute;
+    top: 52vw;
+    width: 100vw;
+    height: 18vw;
+    z-index: 1;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255, 0.8)
+    );
+}
 .carousel-item-holder{
     position: relative;
     width: 100vw;
@@ -273,4 +283,69 @@ Styling Categories
     display: block;
     top: 0;
     left: 0;
+}
+
+.feature-cards-holder{
+    display: flex;
+    z-index: 2;
+    background-color: transparent;
+    position: relative;
+    top :52vw;
+    overflow-x: auto;
+}
+.feature-card{
+    margin: 10px;
+    background-color: white;
+    max-width: 60vw; 
+    max-height: 60vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    border-radius: 8px;
+
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    padding: 0.35rem 0.75rem;
+}
+.feature-img{
+    width: 3.2rem;
+    height: auto;
+}
+.feature-name{
+    font-size: 0.7rem;
+    white-space: nowrap;
+    width: inherit;
+    margin: 5px auto;
+}
+#sign-in-card{
+    padding: 0.8rem 0.8rem 0rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+#sign-in-card > p{
+    width: 20ch;
+}
+#sign-in-card > button{
+    width: 55vw;
+    padding: 8px 0;
+    margin-top: 2.5rem;
+    background-color: #ffd814;
+    border: none;
+    border-radius: 8px;
+    align-self: center;
+}
+#sign-in-card > a{
+    font-size: 0.9rem;
+    margin: 12px 0;
+    text-decoration: none;
+}
+.offer-card{
+    background-color: transparent;
+}
+.offer-card > img{
+    width: 40vw;
+    height: auto;
+    border-radius: 12px;
 }
