@@ -19,6 +19,7 @@
 body{
     max-width: 100vw;
     background-color: #d5dbdb;
+    overflow-x: hidden;
 }
 
 /* 
@@ -225,6 +226,7 @@ Styling Categories
 #category-holder{
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .category{
@@ -237,14 +239,15 @@ Styling Categories
 
 .category img{
     width: 45px;
-    height: 45px;
+    height: auto;
 }
 
 
 /* <-------------------------------STYLING FEATURES AND DEALS SECTION--------------------------------> */
 
 .deals-features-holder{
-    margin-top: 5px;
+    margin: 5px 0;
+    height: 110vw;
 }
 .overlay{
     position: absolute;
@@ -264,7 +267,7 @@ Styling Categories
     list-style: none;
 }
 
-.carousel-item > img{
+.carousel-item > a > img{
     display: block;
     width: 100%;
     height: 100%;
@@ -292,9 +295,10 @@ Styling Categories
     position: relative;
     top :52vw;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 .feature-card{
-    margin: 10px;
+    margin: 10px 5px;
     background-color: white;
     max-width: 60vw; 
     max-height: 60vw;
@@ -302,7 +306,9 @@ Styling Categories
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0;
     border-radius: 8px;
-
+}
+.feature-card > a{
+    text-decoration: none;
 }
 .feature{
     display: flex;
@@ -344,8 +350,24 @@ Styling Categories
 .offer-card{
     background-color: transparent;
 }
-.offer-card > img{
+.offer-card > a > img{
     width: 40vw;
     height: auto;
     border-radius: 12px;
+}
+
+/* ----------------------> AMAZON SPECIAL AD <------------------------ */
+.amazon-special-ad{
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------> PAY ON DELIVERY <------------------------- */
+.po-delivery{
+    display: block;
+    width: 95vw;
+    height: auto;
+    margin: 5px auto;
 }

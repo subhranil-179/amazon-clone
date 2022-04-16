@@ -80,35 +80,35 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
     <div class="categories">
         <ul id="category-holder">
             <li class="category" id="category-1">
-                <img src="{% static 'shop/IMAGES/CATEGORY/grocery.jpeg' %}" alt="grocery.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/grocery.jpg' %}" alt="grocery.jpeg">
                 <p>Grocery</p>
             </li>
             <li class="category" id="category-2">
-                <img src="{% static 'shop/IMAGES/CATEGORY/mobiles.jpeg' %}" alt="mobiles.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/mobiles.jpg' %}" alt="mobiles.jpeg">
                 <p>Mobiles</p>
             </li>
             <li class="category" id="category-3">
-                <img src="{% static 'shop/IMAGES/CATEGORY/fashion.png' %}" alt="fashion.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/fashion.jpg' %}" alt="fashion.png">
                 <p>Fashion</p>
             </li>
             <li class="category" id="category-4">
-                <img src="{% static 'shop/IMAGES/CATEGORY/home.jpeg' %}" alt="home.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/home.jpg' %}" alt="home.jpeg">
                 <p>Home</p>
             </li>
             <li class="category" id="category-5">
-                <img src="{% static 'shop/IMAGES/CATEGORY/essentials.png' %}" alt="essentials.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/essentials.jpg' %}" alt="essentials.png">
                 <p>Essentials</p>
             </li>
             <li class="category" id="category-6">
-                <img src="{% static 'shop/IMAGES/CATEGORY/electronics.jpeg' %}" alt="electronics.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/electronics.jpg' %}" alt="electronics.jpeg">
                 <p>Electronics</p>
             </li>
             <li class="category" id="category-7">
-                <img src="{% static 'shop/IMAGES/CATEGORY/books-and-toys.png' %}" alt="books-and-toys.png">
+                <img src="{% static 'shop/IMAGES/CATEGORY/booksntoys.jpg' %}" alt="books-and-toys.png">
                 <p><pre>Books, Toys</pre></p>
             </li>
             <li class="category" id="category-8">
-                <img src="{% static 'shop/IMAGES/CATEGORY/appliances.jpeg' %}" alt="appliances.jpeg">
+                <img src="{% static 'shop/IMAGES/CATEGORY/appliances.jpg' %}" alt="appliances.jpeg">
                 <p>Appliances</p>
             </li>
         </ul>
@@ -120,7 +120,7 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
                 {% for i in carousel %}
                 <li class="carousel-item">
                     <div class="overlay"></div>
-                    <img src="{% static 'shop/IMAGES/CAROUSEL/' %}{{i}}" alt="" srcset="">
+                    <a href="#"><img src="{% static 'shop/IMAGES/CAROUSEL/' %}{{i}}" alt="" srcset=""></a>
                 </li>
                 {% endfor %}
 
@@ -131,30 +131,38 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
         
         <div class="feature-cards-holder">
             <div class="feature-card">
-                <div class="feature">
-                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/amazon-pay.jpeg' %}" alt="">
-                    <span class="feature-name">
-                        Amazon Pay
-                    </span>
-                </div>
-                <div class="feature">
-                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/recharge.jpeg' %}" alt="">
-                    <span class="feature-name">
-                        Recharge
-                    </span>
-                </div>
-                <div class="feature">
-                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/rewards.jpeg' %}" alt="">
-                    <span class="feature-name">
-                        Rewards
-                    </span>
-                </div>
-                <div class="feature">
-                    <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/pay-bills.jpeg' %}" alt="">
-                    <span class="feature-name">
-                        Pay Bills
-                    </span>
-                </div>
+                <a href="#">
+                    <div class="feature">
+                        <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/amazon-pay.jpeg' %}" alt="">
+                        <span class="feature-name">
+                            Amazon Pay
+                        </span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="feature">
+                        <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/recharge.jpeg' %}" alt="">
+                        <span class="feature-name">
+                            Recharge
+                        </span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="feature">
+                        <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/rewards.jpeg' %}" alt="">
+                        <span class="feature-name">
+                            Rewards
+                        </span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="feature">
+                        <img class="feature-img" src="{% static 'shop/IMAGES/FEATURE_CARD/pay-bills.jpeg' %}" alt="">
+                        <span class="feature-name">
+                            Pay Bills
+                        </span>
+                    </div>
+                </a>
             </div>
             <div class="feature-card" id="sign-in-card">
                 <h3>Welcome</h3>
@@ -165,14 +173,21 @@ Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes an
             <!-- Remove from here -->
             {% for img in feature_card_image_list %}
             <div class="feature-card offer-card">
-                <img src="{% static 'shop/IMAGES/CARD_OFFER/' %}{{img}}" alt="" srcset="">
+                <a href="#"><img src="{% static 'shop/IMAGES/CARD_OFFER/' %}{{img}}" alt="" srcset=""></a>
             </div>
             {% endfor %}
             <!-- Till here -->
         </div>
 
     </div>
-
+    
+    <a href="#">
+        <img class="amazon-special-ad" src="{% static 'shop/IMAGES/AMAZON_SPECIAL/ad.jpg' %}" alt="" srcset="">
+    </a>
+    
+    <a href="#">
+        <img class="po-delivery" src="{% static 'shop/IMAGES/PAY_ON_DELIVERY/pod.jpg' %}" alt="" srcset="">
+    </a>
 
 {% endblock %}
 
